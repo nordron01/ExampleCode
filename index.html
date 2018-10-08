@@ -1,0 +1,1142 @@
+<html>
+<head>
+<style>
+      .yellow{
+	  width:100px;
+	  height:100px;
+	  background: yellow;
+	  overflow: auto;
+	  margin-top: 60px;
+	  }
+	  
+      .red{
+	  width:100px;
+	  height:100px;
+	  margin-top:-50px;
+	  margin-left:25px;
+	  background: red;
+	  position: absolute;
+	  }
+
+	  .mkb_group{
+	  	display: grid;
+	  	grid-template-rows: 100px 100px 100px 100px 100px;
+	  	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	  	grid-column-gap: 0px;
+  		grid-row-gap: 15px;
+  		justify-items: stretch;
+  		align-items: stretch;
+	  }
+
+
+	  .mkb_caption{
+	  	grid-column: 1 / 5;
+  		grid-row: 1 / 1;
+  		background-color: #ddd;
+
+	  }
+	  .mkb_subgroup1{
+	  	grid-column: 1 / 4;
+  		grid-row: 2 / 2;
+
+	  }	
+	  .mkb_subgroup2{
+	  	grid-column: 4/ 8;
+  		grid-row: 2 / 2;
+
+
+	  }	
+	  .mkb_subgroup3{
+	  	grid-column: 8 / 12;
+  		grid-row: 2 / 2;
+
+	  }	
+	  .mkb_subgroup4{
+	  	grid-column: 12 / 16;
+  		grid-row: 2 / 2;
+  
+
+	  }	
+	  .mkb_head_table{
+	  	text-align: center;
+	  	border: 1px solid black;
+	  
+
+	  	
+	  }
+	  .mkb_colum_head{
+	  	border: 1px solid black;
+	  	
+	  
+	  	margin-bottom: 2px;
+
+
+	  }
+
+
+	  .control1{
+	  	grid-column: 1 / 1;
+  		grid-row: 4 / 4;
+  		border: 1px solid black;
+
+
+	  }
+	  .control2{
+	  	grid-column: 2/ 2;
+  		grid-row: 4 / 4;
+  		border: 1px solid black;
+  		
+  		text-align: center;
+  		margin: 2px;
+	  }
+	  .control3{
+	  	grid-column: 3/ 3
+  		grid-row: 4/ 4;
+  		border: 1px solid black;
+  		
+  		text-align: center;
+  		margin: 2px;
+	  }
+	  .control4{
+	  	grid-column: 4 / 4;
+  		grid-row: 3 / 3;
+  		border: 1px solid black;
+  		display: inline-block;
+  		text-align: center;
+  		margin: 2px;
+	  }
+	  .control5{
+	  	grid-column: 5 / 5;
+  		grid-row: 3 / 3;
+  		border: 1px solid black;
+  		display: inline-block;
+  		text-align: center;
+  		.margin: 2px;
+	  }
+	  .control6{
+	  	grid-column: 6 / 6;
+  		grid-row: 3 / 3;
+  		border: 1px solid black;
+  		display: inline-block;
+  		text-align: center;
+  		margin: 2px;
+	  }
+	  .control7{
+	  	grid-column: 7 / 7;
+  		grid-row: 3 / 3;
+  		border: 1px solid black;
+  		display: inline-block;
+  		text-align: center;
+  		margin: 2px;
+	  }
+	  .control8{
+	  	grid-column: 8 / 8;
+  		grid-row: 3 / 3;
+  		border: 1px solid black;
+  		display: inline-block;
+  		text-align: center;
+  		margin: 2px;
+	  }
+	  .control9{
+	  	grid-column: 9 / 9;
+  		grid-row: 3 / 3;
+  		border: 1px solid black;
+  		display: inline-block;
+  		text-align: center;
+  		margin: 2px;
+	  }
+	  .control10{
+	  	grid-column: 10 / 10;
+  		grid-row: 3 / 3;
+  		border: 1px solid black;
+  		display: inline-block;
+  		text-align: center;
+  		margin: 2px;
+	  }
+	  .control11{
+	  	grid-column: 11 / 11;
+  		grid-row: 3 / 3;
+  		border: 1px solid black;
+  		display: inline-block;
+  		text-align: center;
+  		margin: 2px;
+	  }
+	  .control12{
+	  	grid-column: 12 / 12;
+  		grid-row: 3 / 3;
+  		border: 1px solid black;
+  		display: inline-block;
+  		text-align: center;
+  		margin: 2px;
+	  }
+	  input{
+	  	text-align:center;
+	  }
+	  .mkb_sub_tile{
+	  
+	  }
+
+	  .exper{
+	  	grid-column: 7 / 7;
+  		grid-row: 5 / 5;
+  		border: 1px solid red;
+  		text-align: center;
+	  }
+
+	  
+		div.aavaa{
+		width:50px;
+		}
+		label.sga{
+		word-wrap: normal;
+		}
+	  
+	  
+		div.ctitimerload{
+			width: 220px;
+			height: 50px;
+			display: block;
+			background-color: #dde;
+			position: absolute;
+			right: 20%;
+			top: 0px;
+		}
+	  
+	  
+	  
+	  
+	  
+    </style>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"> </script>
+</head>
+
+<body id="body">
+<div class="aavaa">
+
+<label class="sga"> asdsm,dfbs dfgdfgjhjdf dfgdfg  dfg dfg dfg dfg dfg dfg </label>
+</div>
+
+
+	<!--
+asdasd
+<input type ="text" id="buto"/> 
+<input type="text" name="uname">
+<input type="password" name="password">
+<input type="date">
+
+<input id="rad1" type="radio" name="rad" disabled='disabled'><label for="rad1">Radio 1</label> </input>
+<input id="rad2" type="radio" name="rad" ><label  for="rad2">Radio 2</label> </input>
+<input id="rad3" type="radio" name="rad" ><label  for="rad3">Radio 3</label> </input>
+
+
+<select>
+  <option>Пункт 1</option>
+  
+  <option>Пункт 2</option>
+  <option>Пункт 3</option>
+  <option>Пункт 4</option>
+  <option>Пункт 5</option>
+  <option>Пункт 6</option>
+  <option>Пункт 7</option>
+  <option>Пункт 8</option>
+  <option>Пункт 9</option>
+  <option>Пункт 10</option>
+  
+</select>
+<div class="yellow">sdfsdfdshjhkjdfhjdfshkjdfghkjdfghkjdfghkjfghkjdfghkjdfghkjdfghkjdfghkjdfghkjdfghkjdfghkjdfghkjdfgnbhjdfhjgbdfhjgdhjfghdfghjdfghjdfhgdfhgkjhdfkjghdfkjghkjdfhgkjdfhgkjdhfgkjdhfgkjhdfkjghkdfjghkjdfhgkj</div>
+<div class="red">&nbsp;</div>
+<button onclick="sameWindow()">Всегда то же окно</button>
+
+-->
+
+
+
+
+
+
+
+
+
+
+<div class="mkb_group">
+                <span  class="mkb_caption">Фактические данные</span>
+                <div class="mkb_subgroup1">
+                               <div class="mkb_head_table">1кв</div>
+                               
+                </div>
+                <div class="mkb_sub_tile">
+                                               <div class="control1"><label class="mkb_colum_head">Объем</label><input size="6" placeholder="млн.руб"/></div>
+                                               <div class="control2"><label class="mkb_colum_head">Маржа</label><input size="6" placeholder="%"/></div>
+                                               <div class="control3"><label class="mkb_colum_head">ОФР</label><input size="6" placeholder="млн.руб"/></div>
+                               </div>
+                <div class="mkb_subgroup2">
+                               <div class="mkb_head_table">2кв</div>
+                               <div>
+                                               <div class="control4"><label class="mkb_colum_head">Объем</label><input size="6" placeholder="млн.руб"/></div>
+                                               <div class="control5"><label class="mkb_colum_head">Маржа</label><input size="6" placeholder="%"/></div>
+                                               <div class="control6"><label class="mkb_colum_head">ОФР</label><input size="6"/ placeholder="млн.руб"></div>
+                               </div>
+                </div>
+                <div class="mkb_subgroup3">
+                               <div class="mkb_head_table">3кв</div>
+                               <div>
+                                               <div class="control7"><label class="mkb_colum_head">Объем</label><input size="6" placeholder="млн.руб"/></div>
+                                               <div class="control8"><label class="mkb_colum_head">Маржа</label><input size="6" placeholder="%"/></div>
+                                               <div class="control9"><label class="mkb_colum_head">ОФР</label><input size="6" placeholder="млн.руб"/></div>
+                               </div>
+                </div>
+                <div class="mkb_subgroup4">
+                               <div class="mkb_head_table">4кв</div>
+                               <div>
+                                               <div class="control10"><label class="mkb_colum_head">Объем</label><input size="6" placeholder="млн.руб"/></div>
+                                               <div class="control11"><label class="mkb_colum_head">Маржа</label><input size="6" placeholder="%"/></div>
+                                               <div class="control12"><label class="mkb_colum_head">ОФР</label><input size="6" placeholder="млн.руб"/></div>
+                               </div>
+                </div>
+                <div class="exper">asdasd</div>
+</div>
+
+<div class="mkb_group">
+                <span class="mkb_caption">Плановые данные</span>
+                <div class="mkb_subgroup1">
+                               <span class="mkb_head_table">1кв</span>
+                               <div>
+                                               <div class="control1"><label>Объем</label><input/></div>
+                                               <div class="control2"><label>Маржа</label><input/></div>
+                                               <div class="control3"><label>ОФР</label><input/></div>
+                               </div>
+                </div>
+                <div class="mkb_subgroup2">
+                               <span class="mkb_head_table">2кв</span>
+                               <div>
+                                               <div class="control4"><label>Объем</label><input/></div>
+                                               <div class="control5"><label>Маржа</label><input/></div>
+                                               <div class="control6"><label>ОФР</label><input/></div>
+                               </div>
+                </div>
+                <div class="mkb_subgroup3">
+                               <span class="mkb_head_table">3кв</span>
+                               <div>
+                                               <div class="control7"><label>Объем</label><input/></div>
+                                               <div class="control8"><label>Маржа</label><input/></div>
+                                               <div class="control9"><label>ОФР</label><input/></div>
+                               </div>
+                </div>
+                <div class="mkb_subgroup4">
+                               <span class="mkb_head_table">4кв</span>
+                               <div>
+                                               <div class="control10"><label>Объем</label><input/></div>
+                                               <div class="control11"><label>Маржа</label><input/></div>
+                                               <div class="control12"><label>ОФР</label><input/></div>
+                               </div>
+                </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+<script>
+
+/*
+
+const arr = [10, 12, 15, 21];
+for (var i = 0; i < arr.length; i++) {
+  setTimeout(function() {
+    console.log('Index: ' + i + ', element: ' + arr[i]);
+  }, 3000);
+}
+
+function sameWindow() {
+  open('ftp://crm8-test', 'yandex_window');
+}
+
+*/
+
+
+/*
+var Credentials  = {
+	"username": "vk_user",
+  	"domain_id": 201,
+  	"password": "123",
+	"arr": [1,2,3]
+};
+
+
+jQuery.ajax({     
+	url: "https://ebs-app2.mcb.ru/vksession/rest/session",
+ 	 headers: {          
+		    accept: "application/json",
+		    "Content-Type": "application/json; charset=UTF-8",
+  },  
+  method: "POST",
+  async: true,
+  //data: JSON.stringify(Credentials),
+  data: Credentials,
+  success : function(response) {  
+    console.log(response);
+  },
+  error: function(response){
+  	console.log(response);
+  }
+	});
+	*/
+
+
+
+
+
+
+/*
+// копирует все свойства из src в dst,
+// включая те, что в цепочке прототипов src до Object
+function mixin(dst, src){
+	// tobj - вспомогательный объект для фильтрации свойств,
+	// которые есть у объекта Object и его прототипа
+	var tobj = {}
+	for(var x in src){
+		// копируем в dst свойства src, кроме тех, которые унаследованы от Object
+		if((typeof tobj[x] == "undefined") || (tobj[x] != src[x])){
+			dst[x] = src[x];
+		}
+	}
+}
+function extend(Child, Parent) {
+	var F = function() { }
+	F.prototype = Parent.prototype
+	Child.prototype = new F()
+	Child.prototype.constructor = Child
+	Child.superclass = Parent.prototype
+}
+
+
+
+
+
+// ---- родительский класс ----
+
+function Animal(name, walkSpeed) {
+	this.name = name
+	this.walkSpeed = walkSpeed
+}
+
+// добавляем методы объекта
+mixin(Animal.prototype, {
+
+	// пример переменной
+	distance: 0,
+
+	// пример метода
+	walk: function(time) {
+		this.distance = this.distance + time*this.walkSpeed
+	},
+
+	toString: function() {
+		return this.name+" на расстоянии "+this.distance
+	}
+})
+
+// ---- класс наследник ----
+
+function Bird(name, walkSpeed, flySpeed) {
+	// вызов родительского конструктора
+	Bird.superclass.constructor.call(this, name, walkSpeed)
+
+	this.flySpeed = flySpeed
+	
+}
+extend(Bird, Animal)
+
+mixin(Bird.prototype, {
+	fly: function(time) {
+		this.distance = this.distance + time*this.flySpeed
+	}
+	
+})
+
+duck = new Bird("ГУсь",1,10);
+console.log(duck);
+duck.walk(2);
+console.log(duck);
+duck.fly(3);
+console.log(duck);
+
+
+
+
+
+var  points = [
+{x:10, y:20},
+{x:20, y:20},
+{x:30, y:40},
+{x:40, y:50},
+{x:50, y:60}
+];
+
+console.log( points.find( function mather(point){
+return(
+	point.x % 3 == 0 && point.y % 4 ==0
+	);
+	})
+);
+
+console.log(points.findIndex(function mather(point){
+return ( 
+	point.x % 3 == 0 && point.y % 4 ==0 
+	);
+	} ));
+
+
+
+	
+	
+
+
+var arrs = [4,5,6,7,8,9,10,11,12];
+for (var v of arrs){
+console.log(v);
+}
+
+arrs[Symbol.iterator] = function *(){
+var idx = 1;
+do{
+yield this[idx];
+} while ((idx +=2) < this.length);
+
+};
+
+for(var v of arrs){
+	console.log(v);
+}
+
+
+
+console.log(arrs+10);
+arrs[Symbol.toPrimitive] = function(hint){
+		if(hint == "default" || hint == "number") {
+			return this.reduce(function(acc,curr){
+				return acc + curr;
+			}, 0 );
+		}
+	};
+console.log(arrs+10);	
+
+
+
+
+
+
+
+function foo (num){
+	console.log("foo: "+num)
+	this.count++;
+}
+foo.count = 0;
+var i =0;
+for (var i = 0; i < 10; i++) {
+	if( i> 5){
+		foo.call(foo,i);
+	}
+}
+console.log(foo.count);
+
+
+
+
+function ser(){
+	console.log(this.a);
+}
+var obj = {
+	a:2,
+	ser:ser
+};
+obj.ser();
+
+
+function kol(){
+		console.log(this.a);
+}
+
+var obj2 = {
+	a: 42,
+	kol:kol
+};
+
+var obj3 = {
+	a:2,
+	obj2:obj2
+
+};
+
+obj3.obj2.kol();
+
+
+
+
+function foos(){
+	console.log(this.as);
+}
+var objs = {
+	as: 2
+};
+
+var bars = function(){
+	foos.call(objs);
+};
+bars();
+setTimeout(bars,100);
+bars.call(window);
+
+
+
+
+function tusk(something){
+	console.log(this.a, something);
+	return this.a + something;
+}
+
+var tobj = {
+	a:2
+};
+var bak = function(){
+	return tusk.apply(tobj, arguments);
+};
+
+var b = bak(3);
+console.log(b);
+
+
+function husk(something){
+	console.log(this.a, something);
+	return this.a + something;
+}
+var sobj = {
+	a:3,
+	this: () => this.husk(3)
+};
+
+var br = husk.bind(sobj);
+var s = br(5);
+console.log(s);
+
+
+
+
+function fooe(){
+	return (a) => {
+		console.log(this.a);
+	}
+}
+
+var objs1={
+	a:2
+};
+var objs2 = {
+	a: 3
+};
+var bap = fooe.call(objs1);
+bap.call(objs2);
+
+
+
+
+function Fooe(name) {
+    this.name = name;
+}
+
+Fooe.prototype.myName = function() {
+    return this.name;
+}
+
+function Bare(name, label) {
+    Fooe.call(this, name);
+    this.label = label;
+}
+
+//1//Bare.prototype = Object.create(Foo.prototype);
+//2//Bare.prototype = Fooe.prototype;
+//3//Bare.prototype = new Fooe();
+//4//Object.setPropertyOf(Bare.prototype. Fooe.prototype)
+
+
+
+Bare.prototype.myLabel = function() {
+    return this.label;
+}
+
+var a = new Bare("a", "obj a");
+//a.myName();
+a.myLabel();
+
+
+
+
+
+var anotherObject = {
+	cool:function(){
+	console.log("круто!");
+	}
+};
+
+var myObject = Object.create(anotherObject);
+
+
+myObject.doCool = function(){
+	this.cool();
+}
+myObject.cool();
+myObject.doCool();
+
+
+*/
+
+
+/*
+var MyModules = (function Manager(){
+	var modules = {};
+	function define(name,deps,impl){
+		for (var i = 0; i < deps.length; i++) {
+			deps[i] = modules[deps[i]];
+		}
+		modules[name] = impl.apply(impl, deps);
+	}
+		function get(name){
+			return modules[name];
+		}
+		return {
+			define: define,
+			get: get
+		}
+	
+})();
+
+
+
+
+MyModules.define("bar",[],function(){
+
+		function hello(who){
+			return "let me introduce:" + who;
+		}
+		return {
+			hello: hello
+		};
+});
+
+MyModules.define("foo",["bar"],function(bar){
+	var hungry = "hippo";
+	function aweasome(){
+
+		console.log(bar.hello(hungry).toUpperCase());
+	}
+	return {
+		aweasome: aweasome
+	};
+
+
+
+});
+
+var bar = MyModules.get("bar");
+var foo = MyModules.get("foo");
+console.log(bar.hello("hello"));
+foo.aweasome();
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* множественное наследование
+var obj1 = {
+	name: "obj-1",
+	widths: "100",
+	heights: "200",
+	foo() {
+		console.log("obj1.foo",this.name);
+	},
+	sets(widths){
+		return this.widths = widths;
+	},
+},
+obj2 = {
+	name: "obj-2",
+	foo() {
+		console.log("obj2.foo:",this.name);
+	},
+	bar() {
+		console.log("obj2.bar:",this.name);
+	}
+},
+obj4  = {
+	name:  "obj-4",
+},
+handlers = {
+	get(target, key, context){
+		if(Reflect.has(target, key)){
+			return Reflect.get(target, key, context);
+		}
+		else{
+			for (var P of target[Symbol.for("[[Prototype]]")]){
+				if(Reflect.has(P, key)){
+					return Reflect.get(P, key, context);
+				}
+			}
+		}
+	}
+
+},
+obj3 = new Proxy(
+	{
+		name: "obj-3",
+		baz(){
+			this.foo();
+			this.bar();
+		},
+		
+		meta(){
+			console.log(this.widths); 
+		},
+		setw(widths){
+			return this.widths = widths;
+
+		}	},
+	handlers
+
+);
+obj3[Symbol.for("[[Prototype]]")] = [obj1, obj2];
+
+obj1.sets.call(obj1,"300");
+obj3.meta();
+obj3.baz();
+obj1.widths = "400";
+obj3.meta();
+
+obj3.setw.call(obj3, "500");
+obj3.meta();
+
+for(var key in obj3) {
+	console.log(key);
+	console.log(obj3[key]);
+}
+*/
+
+
+
+
+/*
+
+	var stringasdad = "[N]Получен ответ от БПР по [Order Entry - Orders.MKB Order Type] заявке [H][Order Entry - Orders.Order Number][N]. Клиент [Order Entry - Orders.MKB Last Name Applicant] [Order Entry - Orders.MKB First Name Applicant] [Order Entry - Orders.MKB Mid Name Applicant]";
+
+                        var sdasd =   stringasdad.replace(new RegExp('\\[N\\]'+'|'+'\\[H\\]'+'|'+'\\[U\\]', 'g'), "")
+                           
+                       console.log(sdasd);
+	*/
+
+
+
+
+
+
+
+
+
+/*
+function foosia() {
+	console.log( b );
+	return 1;
+}
+
+var a, b, c;
+
+c = {
+	get bar() {
+		console.log( a );
+		return 1;
+	}
+};
+
+a = 10;
+b = 30;
+
+a += foosia();				
+b += c.bar;				
+
+console.log( a + b );	
+*/
+
+
+
+
+
+
+
+
+
+/*
+for (var i = 0; i < arr.length; i++) {
+  setTimeout(function(i_local) {
+    return function() {
+      console.log('The index of this number is: ' + i_local);
+    }
+  }(i), 3000);
+}
+*/
+
+
+/*
+const iter = (i) => {
+  if (i >= arr.length) {return ;}
+  setTimeout(function() {
+    console.log('Index: ' + i + ', element: ' + arr[i]);
+  }, 3000);
+  return iter(i + 1);
+};
+iter(0);
+*/
+/*
+arr.forEach((item, i) => setTimeout(function() {
+    console.log('Index: ' + i + ', element: ' + item);
+  }, 3000));
+
+  */
+
+
+
+/*
+
+for (let i = 0; i < arr.length; i++) {
+  setTimeout(function() {
+    console.log('The index of this number is: ' + i+" "+arr[i]);
+  }, 3000);
+}
+*/
+
+
+/*
+
+
+
+for (const [i, item] of arr.entries()) {
+    setTimeout(function () {
+        console.log(`Index: ${i}, element: ${item}`);
+    });
+}
+
+
+
+
+for (const [i, item] of arr.entries()) {
+    setTimeout(console.log, 0, `Index: ${i}, element: ${item}`);
+}
+
+
+for (var i = 0; i < arr.length; i++) {
+(function(i){
+  setTimeout(function() {
+    console.log('Index: ' + i + ', element: ' + arr[i]);
+  }, 3000);
+})(i)
+}
+*/
+
+/*
+$("#buto").focus(function(){
+      		console.log("Focus");
+      		setTimeout(function(){
+      			console.log("setTimeout");
+				var searchInput = $("#buto");
+			var strLength = searchInput.val().length * 2;
+			searchInput[0].setSelectionRange(strLength, strLength);
+
+      		}    			, 100);
+      	
+      });
+
+*/
+
+/*
+var service  = function() {
+	return {name: 'Service'};
+}
+
+var router = function() {
+	return {name: 'Router'};
+}
+
+
+var injector = {
+	dependencies: {},
+	register: function(key, value){
+			this.dependencies[key] = value;
+	},
+	resolve: function(deps, func, scope){
+		var args = [];
+		for ( var i=0; i<deps.length, d = deps[i]; i++){
+			if(this.dependencies[d]){
+				args.push(this.dependencies[d]);
+			}else{
+				throw new Error('Can\'t resolve'+d);
+			}
+
+		}
+		return function(){
+			func.apply(scope || {}, args.concat(Array.prototype.slice.call(arguments,0)));
+		}
+	}
+}
+
+	var g=[1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+	//var retu = 0;
+	var x1 = 1;
+	var x2 = 2;
+	var x = (x1=2,x2=3);
+	console.log('x='+x+' x1='+x1+' x2='+x2);
+	//console.log(x);	
+
+	for ( var i=0; i<1, retu = g[i] ; i++){
+		console.log('retu'+retu);
+		console.log('i'+i);
+	}
+*/
+
+
+
+
+			/* DI
+			var Injector = {
+			   dependencies: {},
+			   add : function(qualifier, obj){
+			      this.dependencies[qualifier] = obj; 
+			   },
+			   get : function(func){
+			      var obj = new func;
+			      var dependencies = this.resolveDependencies(func);
+			      func.apply(obj, dependencies);
+			      return obj;
+			   },
+			   resolveDependencies : function(func) {
+			      var args = this.getArguments(func);
+			      var dependencies = [];
+			      for ( var i = 0; i < args.length; i++) {
+			         dependencies.push(this.dependencies[args[i]]);
+			      }
+			      return dependencies;
+			   },
+			   getArguments : function(func) {
+			      //This regex is from require.js
+			      var FN_ARGS = /^function\s*[^\(]*\(\s*([^\)]*)\)/m;
+			      var args = func.toString().match(FN_ARGS)[1].split(',');
+			      return args;
+			   }
+			};
+
+
+
+
+			
+				var Logger = {
+			   log : function(log) {}
+			};
+			var SimpleLogger = function() {};
+			var FancyLogger = function(){};
+
+			SimpleLogger.prototype = Object.create(Logger);
+			FancyLogger.prototype = Object.create(Logger);
+
+			SimpleLogger.prototype.log = function(log){
+			   console.log(log);
+			}
+
+			FancyLogger.prototype.log = function(log){
+			   var now = new Date();
+			   console.log(now.toString("dd/MM/yyyy HH:mm:ss fff") + " : "+ log);
+			}
+
+			var ItemController = function(logger){
+			   this.logger = logger;
+			};
+			ItemController.prototype.add = function(item) {
+			   this.logger.log("Item["+item.id+"] is added!");
+			};
+			Injector.add("logger", new FancyLogger());
+			var itemController = Injector.get(ItemController);
+			itemController.add({id : 5});
+		*/
+
+		if( undefined != null){
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+
+		
+
+
+		if(NaN == NaN){
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+	
+
+
+
+
+		if(undefined === false){
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+
+
+		console.log(!false);
+		
+		
+		var J = 123123;
+		if (J === true || J === false) {
+			console.log(true);
+		}else{
+			console.log(false);
+		}
+		
+		
+		
+		var domel = document.createElement("div");
+		domel.setAttribute("class", 'ctitimerload');
+		domel.setAttribute("id", 'ctitimerload');
+		var bodyes = document.getElementById("body");
+		bodyes.appendChild(domel)
+		
+
+
+
+</script>
