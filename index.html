@@ -1139,4 +1139,187 @@ var injector = {
 
 
 
+
+// примесь
+var sayHiMixin = {
+    sayHi: function() {
+        console.log("Привет " + this.name);
+    },
+    sayBye: function() {
+        console.log("Пока " + this.name);
+    }
+    /*,
+  toString:function(){
+				return this.name;
+		}
+		*/
+};
+
+
+/*
+
+const canPlayMusicFn = (state) => ({
+    playMusic() {
+        console.log(`${state.name} grabs his ${state.instrument} and statrts playning music`);
+    }
+});
+
+const canCastSpellsOnMany = {
+    castsSpell(spell, ...many) {
+        many.forEach(target => {
+            console.log(this + ' casts ' + ' on ' + target);
+            this.mana -= spell.mana;
+            spell(target);
+        });
+    }
+}
+
+const canCastSpellsFn = (state) =>({
+	castsSpell(spell, target){
+		console.log(`${state.name} casts ${spell} on ${target}`);
+		state.mana -= spell.mana;
+		spell(target);
+	}
+});
+*/
+
+var usesWeapon = {
+    equip: function() { console.log('equip') },
+    attack: function(target) {
+        switch (this.typeAttack) {
+            case TypeAttacks[0]:
+            case TypeAttacks[1]:
+            case TypeAttacks[2]:
+                target.hp -= 2;
+                console.log(`Attack ${this.typeAttack } by ${target} ${target.hp}`);
+                break;
+        }
+
+        console.log('attack')
+    }
+}
+
+
+
+
+
+const FrostBolt = (state) => {
+    console.log(`${state.name} freezze FrostBolt (-3hp)`);
+    state.hp -= 3;
+    state.states.push('freezze');
+
+};
+
+const canSpellsList = {
+    Pyroblast(target) {
+        //console.log(this);
+        this.mana -= 5;
+        console.log(`what bolt? => ${target}`);
+    }
+
+}
+
+
+
+
+
+const canCasts = {
+    spellCast: (that, spell, target) => {
+        console.log(`${that.name} casts ${spell} on ${target}`);
+        that.mana -= spell.mana;
+        spell(target);
+    }
+
+
+};
+
+
+var lightningSpell = (target) => {
+    console.log('A bolt of lightning electrifies ' + target + '(-10hp)');
+    target.hp -= 10;
+};
+lightningSpell.mana = 5;
+lightningSpell.toString = function() { return 'lightning spell'; };
+
+
+
+
+
+
+
+// использование:
+function User(name, typeAttack) {
+    this.name = name;
+    this.typeAttack = typeAttack;
+    this.hp = 10;
+    this.mana = 10;
+    this.spells = ['Pyroblast'];
+
+}
+
+// передать методы примеси
+for (var key in sayHiMixin) {
+    User.prototype[key] = sayHiMixin[key];
+    console.log(typeof(key));
+}
+
+function Gala(name, typeAttack, hp) {
+
+    this.name = name;
+    this.hp = hp || 10;
+    this.typeAttack = typeAttack;
+    this.states = [];
+    this.toString = function() {
+        return ` ${this.name} `;
+    };
+}
+var setting = 'attack';
+var spellmagic = 'spellCast';
+var magical = 'Pyroblast';
+User.prototype[setting] = usesWeapon[setting];
+User.prototype[spellmagic] = canCasts[spellmagic];
+User.prototype[magical] = canSpellsList[magical];
+
+
+
+// User "умеет" sayHi
+var TypeAttacks = ["Melle", "Ranged", "Magic"];
+
+var gala = new Gala("Галя", TypeAttacks[2]);
+var vasa = new User("Вася", TypeAttacks[0]); // Привет Вася
+console.log(User.prototype);
+
+
+
+
+vasa.sayHi();
+
+vasa[vasa.spells[0]](gala);
+
+
+for (var key in vasa) {
+    if (typeof(vasa[key]) === 'function') {
+        console.log(key);
+    }
+
+}
+
+console.log(vasa);
+console.log(gala);
+usesWeapon.attack(gala);
+//console.log(usesWeapon.attack());
+
+
+var o = {
+    f: function() {
+        return this.a + this.b;
+    }
+};
+var p = Object.create(o);
+p.a = 1;
+p.b = 4;
+
+console.log(p.f()); // 5
+
+
 </script>
